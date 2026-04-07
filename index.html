@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Ahmad Syaifudin | Portfolio</title>
 
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
     <!-- ICON -->
@@ -12,14 +16,16 @@
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 </head>
 <body>
 
-<!-- PARTICLE BACKGROUND -->
 <div id="particles-js"></div>
 
 <header>
-    <h1>Syafdn</h1>
+    <h1>Ahmad</h1>
     <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -30,19 +36,16 @@
 
 <section class="hero">
     <div class="hero-content">
-        <h2>Hi, I'm Ahmad Syaifudin 👋</h2>
+        <h2>Hi, I'm Ahmad 👋</h2>
         <p><span class="typing"></span></p>
         <a href="cv.pdf" class="btn" download>Download CV</a>
     </div>
-    <img src="img/aku.png.jpeg" alt="foto">
+    <img src="img/aku.png.jpeg">
 </section>
 
 <section id="about" class="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>
-        Mahasiswa semester 6 yang fokus pada Web Development,
-        Laravel, dan UI Design modern.
-    </p>
+    <p>Mahasiswa semester 6 yang fokus pada Web Development dan Laravel.</p>
 </section>
 
 <section id="skills" class="skills" data-aos="fade-right">
@@ -64,18 +67,22 @@
     </div>
 </section>
 
-<section id="project" class="project" data-aos="zoom-in">
+<section id="project" class="project" data-aos="fade-up">
     <h2>Projects</h2>
 
-    <div class="cards">
-        <div class="card">
-            <h3>SIKEAN</h3>
-            <p>Sistem Informasi Kegiatan Harian berbasis Laravel.</p>
-        </div>
+    <div class="swiper">
+        <div class="swiper-wrapper">
 
-        <div class="card">
-            <h3>Website Profile</h3>
-            <p>Website modern HTML CSS.</p>
+            <div class="swiper-slide card">
+                <h3>SIKEAN</h3>
+                <p>Sistem Informasi Kegiatan Harian berbasis Laravel.</p>
+            </div>
+
+            <div class="swiper-slide card">
+                <h3>Website Profile</h3>
+                <p>Website modern HTML CSS.</p>
+            </div>
+
         </div>
     </div>
 </section>
@@ -98,6 +105,7 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script src="script.js"></script>
 
