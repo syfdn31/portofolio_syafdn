@@ -1,4 +1,3 @@
-// ANIMASI SCROLL
 const sections = document.querySelectorAll(".section");
 
 const observer = new IntersectionObserver((entries) => {
@@ -8,30 +7,9 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: 0.3
+    threshold: 0.2
 });
 
 sections.forEach(section => {
     observer.observe(section);
-});
-
-// NAV ACTIVE
-const navLinks = document.querySelectorAll("nav a");
-
-window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-        const top = section.offsetTop;
-        if (scrollY >= top - 100) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-    });
 });
