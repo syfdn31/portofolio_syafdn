@@ -3,7 +3,6 @@ body {
     font-family: 'Poppins', sans-serif;
     color: white;
     background: #0f172a;
-    overflow-x: hidden;
 }
 
 #particles-js {
@@ -21,8 +20,7 @@ html {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 60px;
-    backdrop-filter: blur(10px);
+    padding: 20px;
 }
 
 /* HERO */
@@ -30,18 +28,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 60px;
+    padding: 50px;
 }
 
 .hero img {
-    width: 220px;
+    width: 200px;
     border-radius: 20px;
-    transition: 0.3s;
-}
-
-.hero img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px #38bdf8;
 }
 
 /* BUTTON */
@@ -53,17 +45,28 @@ header {
     text-decoration: none;
 }
 
-/* GLASS */
-.card {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 15px;
-    transition: 0.3s;
+/* SECTION */
+.about, .skills, .project, .contact {
+    padding: 50px;
+    text-align: center;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+/* SKILL */
+.bar {
+    background: #334155;
+    height: 8px;
+}
+
+.bar div {
+    height: 8px;
+    background: #38bdf8;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
 }
 
 /* SOCIAL */
@@ -71,4 +74,17 @@ header {
     font-size: 25px;
     margin: 10px;
     color: white;
+}
+
+/* SWIPER */
+.swiper {
+    width: 100%;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
 }
