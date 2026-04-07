@@ -1,15 +1,24 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #0f172a;
     color: white;
+    background: #0f172a;
+    overflow-x: hidden;
+}
+
+/* PARTICLES */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 /* NAVBAR */
 header {
     position: sticky;
     top: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.6);
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -18,33 +27,56 @@ header {
 /* HERO */
 .hero {
     text-align: center;
-    padding: 140px 20px 100px;
+    padding: 120px 20px 80px;
 }
 
 .hero img {
-    width: 130px;
+    width: 140px;
     border-radius: 20px;
     margin-top: 20px;
 }
 
-/* SECTION (INI KUNCI 🔥) */
+/* SECTION */
 .section {
-    padding: 120px 20px; /* BIKIN TERASA 1 LAYAR */
+    padding: 100px 20px;
     text-align: center;
 
     opacity: 0;
-    transform: translateY(50px);
-    transition: 0.7s ease;
+    transform: translateY(60px) scale(0.95);
+    transition: 0.7s;
 }
 
 .section.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+}
+
+/* SKILL */
+.skill {
+    margin: 15px 0;
+}
+
+.bar {
+    background: #334155;
+    height: 8px;
+}
+
+.bar div {
+    height: 8px;
+    background: #38bdf8;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
 }
 
 /* SOCIAL */
 .social a {
     font-size: 22px;
-    margin: 10px;
+    margin: 8px;
     color: white;
 }
