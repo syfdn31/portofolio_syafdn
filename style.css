@@ -1,8 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: #0f172a;
     color: white;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -14,7 +19,6 @@ header {
     justify-content: space-between;
     padding: 15px 20px;
     background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
     z-index: 100;
 }
 
@@ -24,24 +28,49 @@ nav a {
     text-decoration: none;
 }
 
-/* SECTION (INI KUNCI) */
+/* SECTION FIX iPHONE */
 .section {
-    min-height: 100vh;
+    min-height: 100svh;
     padding: 100px 20px 60px;
+
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 
     opacity: 0;
-    transform: translateY(40px);
-    transition: 0.6s;
+    transform: translateY(80px) scale(0.95);
+    transition: all 0.8s ease;
 }
 
 .section.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
+
+/* fallback */
+@supports not (height: 100svh) {
+    .section {
+        min-height: 100vh;
+    }
+}
+
+/* ANIMASI DALAM */
+.section h2,
+.section p,
+.section .skill,
+.section .card,
+.section .social {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s;
+}
+
+.section.show h2 { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.section.show p { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+.section.show .skill { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+.section.show .card { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+.section.show .social { transition-delay: 0.8s; opacity: 1; transform: translateY(0); }
 
 /* HERO */
 .hero {
