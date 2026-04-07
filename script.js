@@ -1,3 +1,4 @@
+// ANIMASI SCROLL
 const sections = document.querySelectorAll(".section");
 
 const observer = new IntersectionObserver((entries) => {
@@ -6,8 +7,17 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add("show");
         }
     });
-}, {
-    threshold: 0.2
 });
 
 sections.forEach(section => observer.observe(section));
+
+
+// PARTICLES BACKGROUND
+particlesJS("particles-js", {
+    particles: {
+        number: { value: 60 },
+        size: { value: 3 },
+        move: { speed: 2 },
+        line_linked: { enable: true }
+    }
+});
